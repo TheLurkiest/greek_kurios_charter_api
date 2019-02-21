@@ -7,8 +7,6 @@ class Songs(models.Model):
     title = models.CharField(max_length=255, null=False)
     # name of artist or group/band
     artist = models.CharField(max_length=255, null=False)
-    # the kudos which that individual has gotten for their work:
-    kudos = models.CharField(max_length=255, null=False)
 
     def __str__(self):
-        return "{} - {}".format(self.title, self.artist, self.kudos)
+        return "{} - {}".format(self.title, self.artist)
